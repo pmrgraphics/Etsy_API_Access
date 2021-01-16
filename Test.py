@@ -21,26 +21,10 @@ for number in offset:
     sleep(0.5)
     user_data.append(response.json())
 
-# Opening JSON file
+# Creating JSON file
 with open('personal.json', 'w') as json_file:
     json.dump(user_data, json_file)
 
-print('Type: ', type(user_data))
-
-
-'''def return_listings(response):
-    results = response['results']
-
-    listings = []
-    for item in results:
-        listing = {}
-        listing['url'] = item['url']
-        listing['title'] = item['title']
-        listings.append(listing)
-
-    return {'listings': listings}
-
-print(return_listings(user_data))'''
 
 # Opening JSON file
 
