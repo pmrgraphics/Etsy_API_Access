@@ -1,8 +1,12 @@
+def return_listings(response):
 
-import json
+    results = response['results']
 
+    listings = []
+    for item in results:
+        listing = {}
+        listing['url'] = item['url']
+        listing['title'] = item['title']
+        listings.append(listing)
 
-f = open('personal.json', "r", encoding="utf-8")
-data = json.load(f)
-f.close()
-(print(data["results"]))
+    return {'listings': listings}
