@@ -58,7 +58,7 @@ df.to_csv('etsy_listings.csv')
 
 
 
-
+df.to_json('backtojson.json')
 
 
 
