@@ -7,7 +7,7 @@ api_key = 'yb9gwm6403ugxhgfmlknav41'
 shared_secret = '7awvsg99o0'
 
 #define permission scopes
-permission_scopes = ['listings_r', 'listings_w']
+permission_scopes = ['email_r','listings_r', 'listings_w', 'listings_d', 'transactions_r', 'billing_r', 'feedback_r']
 
 login_url, temp_oauth_token_secret = \
     EtsyOAuthHelper.get_request_url_and_token_secret(api_key, shared_secret, permission_scopes)
@@ -27,16 +27,17 @@ etsy_oauth = EtsyOAuthClient(client_key = api_key,
                              resource_owner_secret = oauth_token_secret)
 
 etsy = Etsy(etsy_oauth_client = etsy_oauth)
-e = etsy
-print(etsy_oauth)
-
-
-listing_id = 197564673
+print(oauth_token)
+print(oauth_token_secret)
 
 listing_data = {
-            'tags': ['Sixpence Coin Cufflinks', 'coin jewelry', 'Golden Wedding Anniversary', 'antique cufflinks', 'Anniversary Cufflinks',
-                     '1961', 'gift from 1961', '60th birthday for him', '60th for dad', '60th gift for dad', 'gift for men'],
-            'materials': ['1961 lucky Sixpence', 'cufflinks', 'french cufflink backs', 'Gold Plated cuff links', '1961 Lucky Sixpence Coins']
+            'tags': ('Sixpence Coin Cufflinks', 'coin jewelry', 'Golden Wedding Anniversary', 'antique cufflinks', 'Anniversary Cufflinks',
+                     '1961', 'gift from 1961', '60th birthday for him', '60th for dad', '60th gift for dad', 'gift for men')
                }
 request_url = 'https://openapi.etsy.com/v2/listings/197564673'
-e.put(request_url, listing_data)
+print(etsy.get(request_url))
+print(etsy.put(request_url, listing_data))
+
+    #currently forbidden
+
+etsy.put(request_url, listing_data)
