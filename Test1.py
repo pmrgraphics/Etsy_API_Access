@@ -32,7 +32,7 @@ listing_data = { 'listing_id': int(listing_id),
 
 print(etsy.get(req_url).json())   # returns expected json detail for record listing_id
 
-#Problem code snippit to fix
+# TODO Problem code snippit to fix
 print(etsy.put(req_url, data=listing_data))   # returns <Response [403]>
 
 # This API works and returns json data for transactions and receipt data
