@@ -4,10 +4,13 @@ import json
 from time import sleep
 import pandas as pd
 
-api_key = 'yb9gwm6403ugxhgfmlknav41'
-shared_secret = '7awvsg99o0'
-oauth_token = '744c77518995ae3611a0d40269f5d9'
-oauth_token_secret = '05e9b62375'
+import constants
+
+
+api_key = constants.api_key
+shared_secret = constants.shared_secret
+oauth_token = constants.oauth_token
+oauth_token_secret = constants.oauth_token_secret
 
 etsy = OAuth1Session(client_key=api_key,
                      client_secret=shared_secret,
