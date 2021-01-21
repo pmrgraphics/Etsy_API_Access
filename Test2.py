@@ -14,15 +14,19 @@ etsy = OAuth1Session(client_key=api_key,
                     resource_owner_secret=oauth_token_secret)
 
 
-listing_data = { "listing_id": '197564673',
+listing_data = {'listing_id': int(197564673),
             'tags': ['Sixpence Coin Cufflinks', 'coin jewelry', 'Golden Wedding Anniversary', 'antique cufflinks', 'Anniversary Cufflinks',
                      '1961', 'gift from 1961', '60th birthday for him', '60th for dad', '60th gift for dad', 'gift for men'],
             'materials': ['1961 lucky Sixpence', 'cufflinks', 'french cufflink backs', 'Gold Plated cuff links', '1961 Lucky Sixpence Coins']
                }
-request_url = 'https://openapi.etsy.com/v2/listings/active?&api_key=yb9gwm6403ugxhgfmlknav41'
 
 
+
+url = 'https://openapi.etsy.com/v2/listings/197564673?'
+
+result = etsy.put(url, params=listing_data)
+print(result)
 
 #currently forbidden
 
-print(etsy.put(request_url, data=listing_data))
+# print(etsy.put(request_url, params=payload))

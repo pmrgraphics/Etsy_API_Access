@@ -19,21 +19,28 @@ api_url = constants.api_url
 shop_id = constants.shop_id
 listing_id = 197564673
 
-req_url = (api_url + 'listings/' + '%s')%listing_id     # thie equates to  'https://openapi.etsy.com/v2/listings/197564673' at runtime
-
-# req_url = 'https://openapi.etsy.com/v2/listings/%s'%(listing_id)
+req_url = (api_url + 'listings/' + '%s' + '?' + '/put')%listing_id     # thie equates to  'https://openapi.etsy.com/v2/listings/197564673' at runtime
 
 
-listing_data = { 'listing_id': int(listing_id),
+listing_data = {'listing_id': int(listing_id),
                  'tags': ['Sixpence Coin Cufflinks', 'coin jewelry', 'Golden Wedding Anniversary', 'antique cufflinks', 'Anniversary Cufflinks',
                     '1961', 'gift from 1961', '60th birthday for him', '60th for dad', '60th gift for dad', 'gift for men'],
                  'materials': ['1961 lucky Sixpence', 'cufflinks', 'french cufflink backs', 'Gold Plated cuff links', '1961 Lucky Sixpence Coins']
-               }
+                }
 
 print(etsy.get(req_url).json())   # returns expected json detail for record listing_id
+response = etsy.get("https://openapi.etsy.com/v2/oauth/scopes")
+print(response.json())   # returns expected json detail for access ['listings_w', 'transactions_r']
+response = etsy.get("https://openapi.etsy.com/v2/users/__SELF__")
+print(response.json())   # returns expected json detail for access  ['user_id': 17905617, 'login_name': 'paulread1']
+                         # truncated more data available
+
+#  response = etsy.get("https://openapi.etsy.com/v2/taxonomy/seller/get")
+#  print(response.json())   # returns expected json detail for taxonomy details
 
 # TODO Problem code snippit to fix
 print(etsy.put(req_url, data=listing_data))   # returns <Response [403]>
+
 
 # This API works and returns json data for transactions and receipt data
 dates = 'limit=150'

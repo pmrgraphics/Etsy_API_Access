@@ -1,31 +1,66 @@
-
-from requests_oauthlib import OAuth1Session
-import json
-from time import sleep
-import pandas as pd
-
-import constants
+from tkinter import *
+from PIL import Image, ImageTk
 
 
-api_key = constants.api_key
-shared_secret = constants.shared_secret
-oauth_token = constants.oauth_token
-oauth_token_secret = constants.oauth_token_secret
+class Window(Frame):
 
-etsy = OAuth1Session(client_key=api_key,
-                     client_secret=shared_secret,
-                     resource_owner_key=oauth_token,
-                     resource_owner_secret=oauth_token_secret)
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        self.master = master
+
+        self.init_window()
+
+    def init_window(self):
+        self.master.title('GUI')
+        self.pack(fill=BOTH, expand=1)
+
+        # quitButton = Button(self, text='Quit', command=self.client_exit)
+        # quitButton.place(x=0, y=0)
+
+        menu = Menu(self.master)
+        self.master.config(menu=menu)
+
+        file = Menu(menu)
+        file.add_command(label='Save', command=self.client_save)
+        file.add_command(label='Exit', command=self.client_exit)
+        menu.add_cascade(label='File', menu=file)
+
+        edit = Menu(menu)
+        edit.add_command(label='Show Image', command=self.showImg)
+        edit.add_command(label='Show Text', command=self.showTxt)
+        menu.add_cascade(label='Edit', menu=edit)
+
+    def client_exit(self):
+        # TODO build in check window
+        exit()
+
+    def client_save(self):
+        pass
+        # TODO
+
+    def showImg(self):
+        load = Image.open('ABA_HP2.jpg')
+        render = ImageTk.PhotoImage(load)
+
+        img = Label(self, image=render)
+        img.image = render
+        img.place(x=0, y=0)
+
+    def showTxt(self):
+        text = Label(self, text='How are you doing today?')
+        text.pack()
 
 
-api_url = 'https://openapi.etsy.com/v2/'
-shop_id = constants.shop_id
-dates = 'limit=150'
-transaction = etsy.get(api_url + 'shops/' + shop_id + '/transactions'+'?' + dates)
-transaction_df = pd.DataFrame(transaction.json()['results']).sort_values(by=['receipt_id'], ascending=False).reset_index(drop=True)
-receipt = etsy.get(api_url + 'shops/' + shop_id + '/receipts'+'?' + dates)
-receipt_df = pd.DataFrame(receipt.json()['results']).sort_values(by=['receipt_id'], ascending=False).reset_index(drop=True)
-receipt_dataframe = receipt_df.to_csv('receipt.csv')
-transaction_dataframe = transaction_df.to_csv('transaction.csv')
-print(receipt_df)
-print(transaction_df)
+
+
+
+
+
+
+
+
+root = Tk()
+root.geometry('400x300')
+app = Window(root)
+
+root.mainloop()
