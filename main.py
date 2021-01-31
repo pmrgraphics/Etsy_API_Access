@@ -22,12 +22,12 @@ etsy = OAuth1Session(client_key=api_key,
 user_data = []
 
 limit = 100
-offset = [0, 100, 200, 300, 400, 500, 600]
-
+offset = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000]
+shop_name = 'OldCoinCufflinks'
 
 for number in offset:
     params = {'limit': limit, 'offset': number}
-    response = etsy.get("https://openapi.etsy.com/v2/shops/OldCoinCufflinks/listings/active?", params=params)
+    response = etsy.get("https://openapi.etsy.com/v2/shops/%s/listings/active?"%(shop_name), params=params)
     sleep(0.5)
     user_data.append(response.json())
 
@@ -48,7 +48,9 @@ with open('personal.json', 'r') as f:
 df = pd.json_normalize(data, record_path=['results'])
 print(df)
 
-df.to_csv('etsy_listings.csv')
+# df.to_csv('%s.csv'%(shop_name))
+
+df.to_csv(f'{shop_name}.csv')
 
 
 

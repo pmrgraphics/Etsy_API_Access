@@ -19,10 +19,10 @@ api_url = constants.api_url
 shop_id = constants.shop_id
 listing_id = 197564673
 
-req_url = (api_url + 'listings/' + '%s' + '?' + '/put')%listing_id     # thie equates to  'https://openapi.etsy.com/v2/listings/197564673' at runtime
+req_url = (api_url + 'listings/' + '%s')%listing_id     # thie equates to  'https://openapi.etsy.com/v2/listings/197564673' at runtime
 
 
-listing_data = {'listing_id': int(listing_id),
+listing_data = {
                  'tags': ['Sixpence Coin Cufflinks', 'coin jewelry', 'Golden Wedding Anniversary', 'antique cufflinks', 'Anniversary Cufflinks',
                     '1961', 'gift from 1961', '60th birthday for him', '60th for dad', '60th gift for dad', 'gift for men'],
                  'materials': ['1961 lucky Sixpence', 'cufflinks', 'french cufflink backs', 'Gold Plated cuff links', '1961 Lucky Sixpence Coins']

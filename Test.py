@@ -1,60 +1,47 @@
-
-from requests_oauthlib import OAuth1Session
-import json
-from time import sleep
-import pandas as pd
-
+import oauth2 as oauth, urllib
 import constants
+import logging
+import json
+
+import urllib.parse
 
 
-api_key = constants.api_key
-shared_secret = constants.shared_secret
-oauth_token = constants.oauth_token
-oauth_token_secret = constants.oauth_token_secret
+http_headers = {'Content-Type':'application/x-www-form-urlencoded'}
 
-etsy = OAuth1Session(client_key=api_key,
-                     client_secret=shared_secret,
-                     resource_owner_key=oauth_token,
-                     resource_owner_secret=oauth_token_secret)
+listing_id = 174277415
 
+tags = ['Coin Cufflinks', 'coin jewelry', '97th Birthday', 'antique cufflinks', 'Anniversary Cufflinks',
+                    '1924 Farthing', 'gift from 1924', '97th for dad', '97th gift for dad', 'gift for men']
 
-# Creat empty List
-user_data = []
-
-limit = 100
-offset = [0, 100, 200, 300, 400, 500, 600]
+MESSAGE = {'tags': tags}
 
 
-for number in offset:
-    params = {'limit': limit, 'offset': number}
-    response = etsy.get("https://openapi.etsy.com/v2/shops/OldCoinCufflinks/listings/active?", params=params)
-    sleep(0.5)
-    user_data.append(response.json())
+def oauth_req(url, key, secret, http_method="PUT", post_body=None, http_headers=None):
+    CONSUMER_KEY = constants.api_key
+    CONSUMER_SECRET = constants.shared_secret
+    consumer = oauth.Consumer(key=CONSUMER_KEY, secret=CONSUMER_SECRET)
+    token = oauth.Token(key=key, secret=secret)
+    client = oauth.Client(consumer, token)
+    resp, content = client.request(
+        url,
+        method=http_method,
+        # body=str(post_body).encode('utf-8'),
 
-# Opening JSON file
-with open('personal.json', 'w') as json_file:
-    json.dump(user_data, json_file)
+        body=urllib.parse.quote(str(post_body), encoding='utf-8'),
+        headers=http_headers,
+    )
+    return content
 
-print('Type: ', type(user_data))
+try:
 
-
-
-
-# load data using Python JSON module
-with open('personal.json', 'r') as f:
-    data = json.loads(f.read())
-
-# Normalizing data
-df = pd.json_normalize(data, record_path=['results'])
-print(df)
-
-df.to_csv('etsy_listings.csv')
+    result = oauth_req('https://openapi.etsy.com/v2/listings/'f'{listing_id}', constants.oauth_token, constants.oauth_token_secret,
+                       post_body=MESSAGE, http_headers=http_headers)
+except Exception as e:
+    logging.error("Exception occurred", exc_info=True)
+    print(e)
 
 
 
-
-
-
-
+print(result)
 
 

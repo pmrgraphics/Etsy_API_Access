@@ -1,66 +1,49 @@
-from tkinter import *
-from PIL import Image, ImageTk
+import oauth2 as oauth, urllib
+import constants
 
+import urllib.parse
 
-class Window(Frame):
+import logging
 
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        self.master = master
-
-        self.init_window()
-
-    def init_window(self):
-        self.master.title('GUI')
-        self.pack(fill=BOTH, expand=1)
-
-        # quitButton = Button(self, text='Quit', command=self.client_exit)
-        # quitButton.place(x=0, y=0)
-
-        menu = Menu(self.master)
-        self.master.config(menu=menu)
-
-        file = Menu(menu)
-        file.add_command(label='Save', command=self.client_save)
-        file.add_command(label='Exit', command=self.client_exit)
-        menu.add_cascade(label='File', menu=file)
-
-        edit = Menu(menu)
-        edit.add_command(label='Show Image', command=self.showImg)
-        edit.add_command(label='Show Text', command=self.showTxt)
-        menu.add_cascade(label='Edit', menu=edit)
-
-    def client_exit(self):
-        # TODO build in check window
-        exit()
-
-    def client_save(self):
-        pass
-        # TODO
-
-    def showImg(self):
-        load = Image.open('ABA_HP2.jpg')
-        render = ImageTk.PhotoImage(load)
-
-        img = Label(self, image=render)
-        img.image = render
-        img.place(x=0, y=0)
-
-    def showTxt(self):
-        text = Label(self, text='How are you doing today?')
-        text.pack()
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 
 
+http_headers = {'Content-Type':'application/x-www-form-urlencoded'}
+
+listing_id = 174277415
+user_id = 17905617
+
+tags = ['Coin Cufflinks', 'coin jewelry', '97th Birthday', 'antique cufflinks', 'Anniversary Cufflinks',
+                    '1924 Farthing', 'gift from 1924', '97th for dad', '97th gift for dad', 'gift for men']
+
+materials = ['1924 Farthing', 'cufflinks', '1924 Farthing Coins']
+
+# MESSAGE = {'tags': tags, 'materials': materials}
+MESSAGE = {'listing_id': listing_id, "user_id": user_id, 'tags': tags, 'materials': materials}
 
 
+def oauth_req(url, key, secret, http_method="Put", post_body=None, http_headers=None):
+    CONSUMER_KEY = constants.api_key
+    CONSUMER_SECRET = constants.shared_secret
+    consumer = oauth.Consumer(key=CONSUMER_KEY, secret=CONSUMER_SECRET)
+    token = oauth.Token(key=key, secret=secret)
+    client = oauth.Client(consumer, token)
+    resp, content = client.request(
+        url,
+        method=http_method,
+        # body=str(post_body).encode('utf-8'),
+        body=urllib.parse.quote(str(post_body), encoding='utf-8'),
+        headers=http_headers
+    )
+    return content
 
+try:
+    result = oauth_req('https://openapi.etsy.com/v2/listings/%s?' % (listing_id), constants.oauth_token,
+                       constants.oauth_token_secret, post_body=MESSAGE, http_headers=http_headers)
 
+except Exception as e:
+    logging.error("Exception occurred", exc_info=True)
 
+print(result)
 
-
-root = Tk()
-root.geometry('400x300')
-app = Window(root)
-
-root.mainloop()
