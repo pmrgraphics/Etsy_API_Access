@@ -20,8 +20,8 @@ etsy = OAuth1Session(client_key=api_key,
 headers = {'Content-Type':'application/x-www-form-urlencoded'}
 
 
-listing_data = {'listing_id': int(197564673),
-            'tags': ['Sixpence Coin Cufflinks', 'coin jewelry', 'Golden Wedding Anniversary']
+listing_data = {'tags': ['Sixpence Coin, coin jewelry, Golden Wedding, antique cufflinks, Anniversary Cufflinks, 1961, gift from 1961, 60th for him, 60th for dad, 60th gift for dad, gift for men'],
+'materials': ['1961 lucky Sixpence, cufflinks, french cufflink backs, Gold Plated cuff links, 1961 Lucky Sixpence Coins'],
                }
 
 url = 'https://openapi.etsy.com/v2/listings/197564673?'

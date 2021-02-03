@@ -1,46 +1,43 @@
-import oauth2 as oauth, urllib
+from etsy2 import Etsy
+from etsy2.oauth import EtsyOAuthClient
 import constants
 
-import urllib.parse
+from requests.exceptions import HTTPError
+import logging
+logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.warning('This will get logged to a file')
 
 
-http_headers = {'Content-Type':'application/x-www-form-urlencoded'}
+api_key = constants.api_key
+shared_secret = constants.shared_secret
+oauth_token = constants.oauth_token
+oauth_token_secret = constants.oauth_token_secret
 
-listing_id = 174277415
+etsy_oauth = EtsyOAuthClient(client_key=api_key,
+                            client_secret=shared_secret,
+                            resource_owner_key=oauth_token,
+                            resource_owner_secret=oauth_token_secret)
 
-tags = ['Coin Cufflinks', 'coin jewelry', '97th Birthday', 'antique cufflinks', 'Anniversary Cufflinks',
-                    '1924 Farthing', 'gift from 1924', '97th for dad', '97th gift for dad', 'gift for men']
+etsy = Etsy(etsy_oauth_client=etsy_oauth)
 
-materials = ['1924 Farthing', 'cufflinks', '1924 Farthing Coins']
+listing_id = 940989316
+tag = 'Cufflinks, Coin Cufflinks, 1971 Birthday Gift, 1971 Coin Gift, 50th Birthday, 50th Anniversary, 50th Gift, 50th Birthday Gift, 50th Birthday Him, 1971 Halfpenny, 50th Gift Dad, 50th Gift Brother, 50th Gift Husband'
 
-# MESSAGE = {'tags': tags, 'materials': materials}
-MESSAGE = {'listing_id': listing_id,'tags': tags, 'materials': materials}
+try:
+    r = etsy.updateListing(listing_id=listing_id,
+                           tags=tag)
 
-
-def oauth_req(url, key, secret, http_method="PUT", post_body=None, http_headers=None):
-    CONSUMER_KEY = constants.api_key
-    CONSUMER_SECRET = constants.shared_secret
-    consumer = oauth.Consumer(key=CONSUMER_KEY, secret=CONSUMER_SECRET)
-    token = oauth.Token(key=key, secret=secret)
-    client = oauth.Client(consumer, token)
-    resp, content = client.request(
-        url,
-        method=http_method,
-        # body=str(post_body).encode('utf-8'),
-        body=urllib.parse.quote(str(post_body), encoding='utf-8'),
-        headers=http_headers,
-    )
-
-    print(resp)
-    print(http_method)
-    print(urllib.parse.quote(str(post_body), encoding='utf-8'))
-    print(http_headers)
-    return content
+except HTTPError as http_err:
+    logging.error("Exception occurred", exc_info=True)
+    print(f'HTTP error occurred: {http_err}')
+except Exception as err:
+    logging.error("Exception occurred", exc_info=True)
+    print(f'Other error occurred: {err}')
+else:
+    print(r)
 
 
 
-result = oauth_req('https://openapi.etsy.com/v2/listings/%s?'%(listing_id), constants.oauth_token, constants.oauth_token_secret, post_body=MESSAGE, http_headers=http_headers)
 
-print(result)
 
 

@@ -8,25 +8,15 @@ from etsy2.oauth import EtsyOAuthClient
 from requests.exceptions import HTTPError
 
 import logging
-import get_shop_data
-import Clean_Etsy_Tags
-import Etsy_Year_replace
 
-global words
-words = []
+
+
 
 logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 logging.warning('This will get logged to a file')
 
 
 df = pd.read_csv('test.csv')
-
-# TODO get rid of any extra characters
-
-
-# df['materials'] = df['materials'].replace(['\''], ' ')
-
-
 
 api_key = constants.api_key
 shared_secret = constants.shared_secret
@@ -44,14 +34,17 @@ etsy = Etsy(etsy_oauth_client=etsy_oauth)
 def check_duplicates(tags):
     splits = tags.split(', ')
     # for loop to iterate over words array
+    words = []
     for split in splits:
-        if split in words:
-            print(split, ':  Is in list already')
+        if split.lower() in words:
+            print(split, 'in list already')
         else:
+            # words.append(split.title())
             words.append(split)
     # check each tag is 20 characters or less
     temp = []
     for word in words:
+
         if len(word) > 20:
             print('one of the tags is to long:  ', word)
         else:
@@ -69,11 +62,15 @@ for index, row in df.iterrows():
     tag = row['tags']
     tags = check_duplicates(tag)
     materials = row['materials']
+    recipient = row['recipient']
+    occasion = row['occasion']
+    style = row['style']
     taxonomy_id = row['taxonomy_id']
 
     try:
         r = etsy.updateListing(listing_id=listing_id, title=title,
-                               tags=tags, materials=materials, taxonomy_id=taxonomy_id)
+                               tags=tags, materials=materials, recipient=recipient,
+                               occasion=occasion, style=style, taxonomy_id=taxonomy_id)
 
         # slow down so not to many hits per second on api endpoint
         sleep(0.5)
