@@ -31,9 +31,26 @@ etsy_oauth = EtsyOAuthClient(client_key=api_key,
 etsy = Etsy(etsy_oauth_client=etsy_oauth)
 
 
+# not_these = ['st', 'nd', 'rd', 'a', 'the', 'of']
+# thestring = tags
+# word =  ' '.join(word
+#                if word in not_these
+#                else word.title()
+#                for word in thestring.capitalize().split(' '))
+
+
+
 def check_duplicates(tags):
+    # not_these = ['st', 'nd', 'rd', 'a', 'the', 'of']
+    # thestring = tags
+    # words = ' '.join(word
+    #                if word in not_these
+    #                else word.title()
+    #                for word in thestring.Capitalise().split(' '))
+
+
     splits = tags.split(', ')
-    # for loop to iterate over words array
+    # # for loop to iterate over words array
     words = []
     for split in splits:
         if split.lower() in words:
