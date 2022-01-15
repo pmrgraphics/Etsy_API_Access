@@ -1,0 +1,276 @@
+ERROR 2021-02-18 09:53:39,136 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/get_shop_data.py", line 34, in get_shop
+    user_data.append(response.json())
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR 2021-03-01 22:47:13,595 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 65, in get_shop
+    df = pd.json_normalize(data, record_path=['results'])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 336, in _json_normalize
+    _recursive_extract(data, record_path, {}, level=0)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 309, in _recursive_extract
+    recs = _pull_records(obj, path[0])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 248, in _pull_records
+    result = _pull_field(js, spec)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 239, in _pull_field
+    result = result[spec]
+KeyError: 'results'
+ERROR 2021-03-01 22:48:39,505 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 65, in get_shop
+    df = pd.json_normalize(data, record_path=['results'])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 336, in _json_normalize
+    _recursive_extract(data, record_path, {}, level=0)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 309, in _recursive_extract
+    recs = _pull_records(obj, path[0])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 248, in _pull_records
+    result = _pull_field(js, spec)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 239, in _pull_field
+    result = result[spec]
+KeyError: 'results'
+ERROR 2021-03-01 23:01:52,599 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers={'x-api-key': 'yb9gwm6403ugxhgfmlknav41'}, auth={
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-01 23:02:27,956 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers={'x-api-key': 'yb9gwm6403ugxhgfmlknav41'}, auth={
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-01 23:04:19,931 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers={'x-api-key': 'yb9gwm6403ugxhgfmlknav41'}, auth={
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-01 23:05:58,322 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers=headers, auth=auth, params=params)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-02 20:20:56,756 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers=headers, auth=api_call_headers, params=params)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-02 20:21:30,295 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers=headers, auth=api_call_headers)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-02 20:23:48,653 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers=headers,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-02 20:24:15,950 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers=headers,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-02 20:31:19,852 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 47, in get_shop
+    response = requests.get('https://openapi.etsy.com/v3/application/shop/6921272/listings/active', headers=headers,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 528, in request
+    prep = self.prepare_request(req)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/sessions.py", line 456, in prepare_request
+    p.prepare(
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 320, in prepare
+    self.prepare_auth(auth, url)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/requests/models.py", line 551, in prepare_auth
+    r = auth(self)
+TypeError: 'dict' object is not callable
+ERROR 2021-03-02 20:41:28,853 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 68, in get_shop
+    df = pd.json_normalize(data, record_path=['results'])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 336, in _json_normalize
+    _recursive_extract(data, record_path, {}, level=0)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 309, in _recursive_extract
+    recs = _pull_records(obj, path[0])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 248, in _pull_records
+    result = _pull_field(js, spec)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 239, in _pull_field
+    result = result[spec]
+KeyError: 'results'
+ERROR 2021-03-02 20:42:28,337 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 68, in get_shop
+    df = pd.json_normalize(data, record_path=['results'])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 336, in _json_normalize
+    _recursive_extract(data, record_path, {}, level=0)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 309, in _recursive_extract
+    recs = _pull_records(obj, path[0])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 248, in _pull_records
+    result = _pull_field(js, spec)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 239, in _pull_field
+    result = result[spec]
+KeyError: 'results'
+ERROR 2021-03-02 20:44:03,477 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 68, in get_shop
+    df = pd.json_normalize(data, record_path=['results'])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 336, in _json_normalize
+    _recursive_extract(data, record_path, {}, level=0)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 309, in _recursive_extract
+    recs = _pull_records(obj, path[0])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 248, in _pull_records
+    result = _pull_field(js, spec)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 239, in _pull_field
+    result = result[spec]
+KeyError: 'results'
+ERROR 2021-03-02 20:44:35,706 And error has occurred at /get_shop
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/log.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Access_Etsy_V3_API.py", line 68, in get_shop
+    df = pd.json_normalize(data, record_path=['results'])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 336, in _json_normalize
+    _recursive_extract(data, record_path, {}, level=0)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 309, in _recursive_extract
+    recs = _pull_records(obj, path[0])
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 248, in _pull_records
+    result = _pull_field(js, spec)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/venv/lib/python3.8/site-packages/pandas/io/json/_normalize.py", line 239, in _pull_field
+    result = result[spec]
+KeyError: 'results'

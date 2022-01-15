@@ -1,5 +1,6 @@
 # importing pandas as pd
 import pandas as pd
+import log
 
 # Making data frame from the csv file
 df = pd.read_csv('oldCoinCufflinks.csv')
@@ -8,7 +9,7 @@ column_to_replace = ("tags",
                      "materials",
                      "style",
                      )
-
+# TODO Store still in JSON File?
 data = {"[": "",
         "',": ",",
         ", '": ", ",
@@ -17,7 +18,7 @@ data = {"[": "",
         }
 
 
-# this will replace "Boston Celtics" and "Texas" with "Omega Warrior"
+@log.log_error()
 def replace(column_to_replace, replace_from, replace_to):
     df[column_to_replace] = df[column_to_replace].str.replace(replace_from, replace_to, regex=True)
 

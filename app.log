@@ -1,1 +1,721 @@
 root - WARNING - This will get logged to a file
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 400, text: 'quantity cannot be empty.', url 'https://openapi.etsy.com/v2/listings/928407022'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/118862436'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/502356919'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/584125973'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/113227620'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 400, text: 'Title cannot be more than 140 characters.', url 'https://openapi.etsy.com/v2/listings/262591885'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/526607439'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/180326630'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 400, text: 'Title cannot be more than 140 characters.', url 'https://openapi.etsy.com/v2/listings/198878555'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/584092373'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/505264313'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/639306415'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/584134225'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/162161503'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/526607047'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/185214368'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/512798226'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 400, text: 'Title cannot be more than 140 characters.', url 'https://openapi.etsy.com/v2/listings/937135224'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/502389811'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/584129397'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/584133021'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/570303168'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/180328525'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/526608057'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/526605951'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/526606785'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/512796816'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/121812518'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 400, text: 'You may not have duplicate tags.', url 'https://openapi.etsy.com/v2/listings/161270569'
+root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 330, in _get
+    self.data = self.decode(response.text)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/paulread/PycharmProjects/Etsy API Access/Update_Etsy_Listings.py", line 83, in <module>
+    r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 116, in __call__
+    return self.invoke(**kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 142, in invoke
+    return self.api._get(self.spec['http_method'], applied_url, **kwargs)
+  File "/Users/paulread/PycharmProjects/Etsy API Access/etsy2/_core.py", line 332, in _get
+    raise ValueError('Could not decode response from Etsy as JSON: status_code: %r, text: %r, url %r' \
+ValueError: Could not decode response from Etsy as JSON: status_code: 403, text: 'listing inventory is not backwards compatible, cannot manually set price or quantity', url 'https://openapi.etsy.com/v2/listings/584130271'

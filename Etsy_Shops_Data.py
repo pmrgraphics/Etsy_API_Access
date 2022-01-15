@@ -28,7 +28,8 @@ user_data = []
 
 limit = 100
 offset = [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000]
-shop_name = ['OldCoinCufflinks', 'JFoxCufflinks', 'EllieEllieltd', 'CoinandKeyringShop', 'QuigsWorkshop', 'Coinworx', 'QuirkyGirlWorkshop', 'PrenoaJewellery']
+# TODO Store This in JSON File?
+shop_name = ['OldCoinCufflinks', 'JFoxCufflinks', 'EllieEllieltd']
 
 for shop in shop_name:
     for number in offset:

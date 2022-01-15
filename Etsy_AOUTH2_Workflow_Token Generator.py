@@ -43,6 +43,8 @@ def open_connection():
     print(acc_token)
     return etsy
 
+# etsy = open_connection()
+
 def get_dataframes(etsy=open_connection()):
     api_url = 'https://openapi.etsy.com/v2/'
     shop_id = '6921272'

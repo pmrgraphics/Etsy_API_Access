@@ -2,13 +2,13 @@
 import pandas as pd
 
 # Making data frame from the csv file
-df = pd.read_csv('combined_csv.csv')
+df = pd.read_csv('oldCoinCufflinks_clean.csv')
 
 column_to_replace = ("title",
                      "description",
                      "tags"
                      )
-
+# TODO Store This in JSON File?
 data = {"109th": "110th",
         "108th": "109th",
         "107th": "108th",

@@ -1,0 +1,5 @@
+root - WARNING - This will get logged to a file
+werkzeug - WARNING -  * Debugger is active!
+werkzeug - INFO -  * Debugger PIN: 201-545-375
+werkzeug - INFO -  * Detectedwerkzeug - INFO -  * Restarting with stat
+s/Etsy API Access/test9.py', reloading

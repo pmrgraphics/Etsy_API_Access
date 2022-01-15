@@ -90,7 +90,7 @@ for index, row in df.iterrows():
                                occasion=occasion, style=style, )
 
         # slow down so not to many hits per second on api endpoint
-        sleep(0.5)
+        sleep(0.2)
 
     except HTTPError as http_err:
         logging.error("Exception occurred", exc_info=True)

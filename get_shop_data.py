@@ -5,7 +5,9 @@ from time import sleep
 import pandas as pd
 
 import constants
+import log
 
+@log.log_error()
 def get_shop(shop):
     api_key = constants.api_key
     shared_secret = constants.shared_secret
@@ -51,7 +53,7 @@ def get_shop(shop):
     return df
 
 
-response = get_shop('OldCoinCufflinks')
+response = get_shop('AcmeCufflinks')
 print(response)
 
 

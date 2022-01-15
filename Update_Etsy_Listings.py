@@ -75,14 +75,13 @@ for index, row in df.iterrows():
      taxonomy_id = int(row['taxonomy_id'])  # int
      tag = row['tags']  # array(string)
      tags = check_duplicates(tag)
-     recipient = row['recipient']  # enum(en, women, unisex_adults, teen_boys, teen_girls, teens, boys, girls, children, baby_boys, baby_girls, babies, birds, cats, dogs, pets, not_specified))
-     occasion = row['occasion']  # enum(anniversary, baptism, bar_or_bat_mitzvah, birthday, canada_day, chinese_new_year, cinco_de_mayo, confirmation, christmas, day_of_the_dead, easter, eid, engagement, fathers_day, get_well, graduation, halloween, hanukkah, housewarming, kwanzaa, prom, july_4th, mothers_day, new_baby, new_years, quinceanera, retirement, st_patricks_day, sweet_16, sympathy, thanksgiving, valentines, wedding)
-     style = row['style']  # array(string)
+     # recipient = row['recipient']  # enum(en, women, unisex_adults, teen_boys, teen_girls, teens, boys, girls, children, baby_boys, baby_girls, babies, birds, cats, dogs, pets, not_specified))
+     # occasion = row['occasion']  # enum(anniversary, baptism, bar_or_bat_mitzvah, birthday, canada_day, chinese_new_year, cinco_de_mayo, confirmation, christmas, day_of_the_dead, easter, eid, engagement, fathers_day, get_well, graduation, halloween, hanukkah, housewarming, kwanzaa, prom, july_4th, mothers_day, new_baby, new_years, quinceanera, retirement, st_patricks_day, sweet_16, sympathy, thanksgiving, valentines, wedding)
+     # style = row['style']  # array(string)
 
      try:
         r = etsy.updateListing(listing_id=listing_id,  title=title, description=description,
-                               price=price,tags=tags, materials=materials, recipient=recipient,
-                               occasion=occasion, style=style, taxonomy_id=taxonomy_id)
+                               price=price,tags=tags, materials=materials, taxonomy_id=taxonomy_id)
 
         # slow down so not to many hits per second on api endpoint
         sleep(0.2)

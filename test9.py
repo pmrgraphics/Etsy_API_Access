@@ -1,104 +1,100 @@
-from time import sleep
+from urllib.parse import urlencode
+from uuid import uuid4
+import base64
+import hashlib
+import os
+import re
+from flask import Flask, request, session
+import requests
+from base64 import b64encode
+from os import urandom
 import constants
 
-import pandas as pd
-from etsy2 import Etsy
+app = Flask(__name__)
 
-from etsy2.oauth import EtsyOAuthClient
-from requests.exceptions import HTTPError
+scope = urlencode({'scope': 'listings_d listings_r listings_w transactions_r transactions_w'})
 
-import logging
-import get_shop_data
-import Clean_Etsy_Tags
-import Etsy_Year_replace
+API_BASE = 'https://www.etsy.com/'
+# API_BASE = 'https://openapi.etsy.com/v3/public'
+API_BASE_TOKEN = 'https://openapi.etsy.com/v3/public'
+CLIENT_ID = constants.api_key
+CLIENT_SECRET = constants.shared_secret
+REDIRECT_URI = 'https://collect2.com/api/f1201a0c-c7cd-4ec5-8605-a95ff1cd274d/datarecord/'
+HEADER = {"x-api-key": 'yb9gwm6403ugxhgfmlknav41'}
 
-global words
-words = []
+@app.route('/')
+def index():
+    code_verifier = base64.urlsafe_b64encode(os.urandom(40)).decode('utf-8')
+    code_verifier = re.sub('[^a-zA-Z0-9]+', '', code_verifier)
+    code_verifier, len(code_verifier)
+    code_challenge = hashlib.sha256(code_verifier.encode('utf-8')).digest()
+    code_challenge = base64.urlsafe_b64encode(code_challenge).decode('utf-8')
+    code_challenge = code_challenge.replace('=', '')
+    code_challenge, len(code_challenge)
 
-logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
-logging.warning('This will get logged to a file')
+    connect_url = API_BASE + 'oauth/connect' + urlencode({
 
+        'response_type': 'code',
+        'client_id': CLIENT_ID,
+        'redirect_uri': REDIRECT_URI,
+        'scope': scope,
+        'state': uuid4().hex,
+        'code_challenge': code_challenge,
+        'code_challenge_method': 'S256',
+        # 'Header': HEADER
 
-df = pd.read_csv('test.csv')
+    })
+    # session['code_verifier'] = code_verifier
+    # session.modified = True
 
-# TODO get rid of any extra characters
+    return '<html><a href=%s>Connect with Etsy</a></html>' % connect_url
 
+@app.route('/redirect')
+def redirect_handler():
+    assert 'error' not in request.args, request.args
 
-# df['materials'] = df['materials'].replace(['\''], ' ')
+    # in the real world we should validate that `state` matches the state we set before redirecting the user
+    state = request.args.get('state')
 
+    # using the code we've just been given, make a request to obtain
+    # an access token for this user
+    code = request.args.get('code')
+    response = requests.post(API_BASE + '/oauth/token/', data={
+        'grant_type': 'authorization_code',
+        'code': code,
+        'client_id': CLIENT_ID,
+        'client_secret': CLIENT_SECRET,
+        'redirect_uri': REDIRECT_URI,
+    })
+    assert response.ok, 'Token request failed: %s' % response.content
 
+    data = response.json()
+    token = data['access_token']
+    headers = {
+        'Authorization': 'Bearer %s' % token,
+    }
 
-api_key = constants.api_key
-shared_secret = constants.shared_secret
-oauth_token = constants.oauth_token
-oauth_token_secret = constants.oauth_token_secret
+    # now we can make API requests using this token in the headers
+    response = requests.post(API_BASE + '/graphql', json={
+        'query': '''
+            query {
+                user {
+                    email
+                }
+            }
+        '''
+    }, headers=headers)
 
-etsy_oauth = EtsyOAuthClient(client_key=api_key,
-                            client_secret=shared_secret,
-                            resource_owner_key=oauth_token,
-                            resource_owner_secret=oauth_token_secret)
+    assert response.ok, 'Request to graphql API failed'
 
-etsy = Etsy(etsy_oauth_client=etsy_oauth)
-
-
-def check_duplicates(tags):
-    splits = tags.split(', ')
-    # for loop to iterate over words array
-    for split in splits:
-        if split in words:
-            print(split, ':  Is in list already')
-        else:
-            words.append(split)
-    # check each tag is 20 characters or less
-    temp = []
-    for word in words:
-        if len(word) > 20:
-            print('one of the tags is to long:  ', word)
-        else:
-            temp.append(word)
-    # rebuild tags with comma seperater
-    L = temp
-    finish = ",".join(str(x) for x in L)
-    return finish
-
-
-# go through eacjh row of the data frame and pick out requested info
-for index, row in df.iterrows():
-    listing_id = row['listing_id']
-    title = row['title']
-    tag = row['tags']
-    tags = check_duplicates(tag)
-    materials = row['materials']
-    taxonomy_id = row['taxonomy_id']
-
-    try:
-        r = etsy.updateListing(listing_id=listing_id, title=title,
-                               tags=tags, materials=materials, taxonomy_id=taxonomy_id)
-
-        # slow down so not to many hits per second on api endpoint
-        sleep(0.5)
-
-    except HTTPError as http_err:
-        logging.error("Exception occurred", exc_info=True)
-        print(f'HTTP error occurred: {http_err}')
-    except Exception as err:
-        logging.error("Exception occurred", exc_info=True)
-        print(f'Other error occurred: {err}')
-    else:
-        print(r)
-
+    email = response.json()['data']['user']['email']
+    return '''
+        <html>
+        %s has authorised their Marvel account
+        Their access token is %s
+        </html>
+    ''' % (email, token)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,0 +1,30 @@
+# Trading API Sandbox - https://www.x.com/developers/ebay/products/trading-api
+api.sandbox.ebay.com:
+    compatability: 719
+    appid: 'PaulRead-replacme-SBX-482083935-2004a36b'
+    certid: 'SBX-eead2a03c733-3b74-4e00-b906-627b'
+    devid: 'e3b3d2c0-38f4-4997-b251-9fb8c5922fd3'
+    token: 'v^1.1#i^1#f^0#r^0#p^1#I^3#t^H4sIAAAAAAAAAOVYa2wUVRTe7QsLVMVoqY/IZmgQKDM7s7O7nZ1012y3FLZpu6Vba1sl5M7s3Xba2Zlh5g7tUsFaDYkSHwSjGFErvmIioCYoRgyKoAmJUdE/oH80Iu0PgyGKKAa9M1vKthLoY41NnD+Te+85557z3fO6lx4oKl6+ZfWW30qcc/KGBuiBPKeTmUcXFxVWXJufd0uhg84icA4NlA8UDOYPVxkgJWt8MzQ0VTGgqy8lKwZvTwYJU1d4FRiSwSsgBQ0eiXw83FDPeyia13QVqaIqE65oTZCAgpcVOI6rZADgaC+LZ5WLMlvUIJHkGJEVBD/0eiDnTVrrhmHCqGIgoKAg4aE9HpJmSNrfwvh4H8OzHBXwcR2EqxXqhqQqmISiiZCtLm/z6lm6XllVYBhQR1gIEYqGa+OxcLRmZWNLlTtLVmgUhzgCyDTGjyJqArpagWzCK29j2NR83BRFaBiEO5TZYbxQPnxRmWmob0MdCHi9IMlBv1DJQAjEnEBZq+opgK6shzUjJcikTcpDBUkofTVEMRpCNxTR6KgRi4jWuKzfGhPIUlKCepBYWR1uDzc1EaEmYMrNECRIHWoyEFOQjFe3kV7OQ3NsgPWRHpr2AtYvjG6UkTYK84SdIqqSkCzQDFejiqoh1hpOxMabhQ0miikxPZxElkbZdJVjGHo7rEPNnKKJuhTrXGEKA+Gyh1c/gTFuhHRJMBEckzBxwYYoSABNkxLExEXbF0fdp88IEl0Iabzb3dvbS/WylKp3ujFQjLutoT4udsEUIDCtFesZeunqDKRkmyJCzGlIPEprWJc+7KtYAaWTCLF0wONhR3Efr1Zo4uw/JrJsdo+PiJxFSBIIDAwAQRBBwCeAXERIaNRJ3ZYeUABpMgX0HogsP4WkiP3MTEFdSvCsL+lhuSQkE/5AkvQGkklS8CX8JJOEkIYQ6xTg/k+BMllXj0NRhygnvp4zP0esr7m9NtbOsKvWt0RSKCpFfBUm28RyrXJPnRINdHS3ddVtiG00G4KTjYbLGh+RJYxMC94/FwBYsZ47EFarBoKJGZkXF1UNNqmyJKZn1wGzeqIJ6ChdbabxOA5lGf9mZGpY06K5ydg5M3KKyWJ6dueuUv1HVeqyVhmW484uqyx+AwsAmkThOmTFepoS1ZRbBbgJsabX2Vq7JhBelsgtmGmq04QGwpokcB84aSYJJ3MKl7TE5FkyBRMbMXkWfMlImCKa1kZ2ZaYwmlJnFzKmtGffTEARTLlnRk4n4cvDrHI5bG7GbimR6fop23jK2CBSOjRUU8cXHipmNcEtag9UcEuBdFWWod7KzDiZplImAoIMZ1tWzUF2kcDU+p2CQefRf90uxu9lvJzXM9alTs820e5o1s22mpDrWjiFu417/EtLyGF/zKDzA3rQ+V6e00lX0iRTQS8ryr+rIH8+YeBsQhlASQhqHyWBJIUTmQKQqUOqB6Y1IOl5RU7pxNfiuaw3nqG1dNnYK09xPjMv68mHvu3SSiFz3cISj4dmaD/j8zEs10EvvrRawJQW3Ej+vOvL4Q/XPj2w4NCnXzlqw3N/31xPl4wROZ2FDuyQjlTHuWX9iz4LRo5dOL5jpLU/fmZzFel7MXZgQeDE7q5N8i/PXPPRW9obz99/+44Fc44Y+3exC+/YeDwy9+4WR0XpD/t2vfTImu+XnBvu3/5jfXP02QtlX6x+/4/GW3vJV/blb15575ul1+t7bjZPk4cePvxX7WPzhbKDB0jPmpOFDzp2D8X2rpiz6tS7Z+9rP7Oke+v5p/x1I5FXnzj/+s5fd9S17zv1QPnZEeW58uBitbBu73cNba9tI5besO2Y8nL54Ts31ny+v75maU33yLL1jtrS/uP6UMR8dPjo3EOdedGy5XsOlt10ZGfpPVUPHft2xcBWMPy49k7VI8WtH7vZs08uOvHCpu1/lpw++fYni376JnOMfwN9NbI4fRMAAA=='
+
+# Trading API - https://www.x.com/developers/ebay/products/trading-api
+api.ebay.com:
+    compatability: 719
+    appid: 'PaulRead-replacme-PRD-1c2490906-7d7150ee'
+    certid: 'PRD-c24909065239-cd6b-41a1-93a3-2ae3'
+    devid: 'e3b3d2c0-38f4-4997-b251-9fb8c5922fd3'
+    token: 'AgAAAA**AQAAAA**aAAAAA**FRjXYQ**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wJnY+jCJaKpgqdj6x9nY+seQ**xt4GAA**AAMAAA**89hWZlRIaK+tOsoKEaKv0pNiuAyk/Ov9l7a26YJvs6+uq66Fkc07VL/kbFUR/GJCydLAa/1EARG4+nVXAkXz6Ke9rL5pVKOH+TXCduDEFwdtCq0XzBqZCeHf6+Z8+tT9FLk17NAAIvLjf7qN+j31wve3RPe0QAGKG6X2eCVFJP2XhvYR4ZQyicVRrbkujiQ9vONXqo6YJpO51em+NWzngcCZfGqwRRoNaD+jJ0sSgVy4qMIxV/LuJnHlKOdbgV8EIdLE4rxa9iEfs8T5dOl2MBj1oDEcPM/ln66AkgtfasFxQuwVB59LEonkARDzXvk0eEqzV8VgVP8TW6f0iCmTWKEhkBSP71JVQetKd/ggXDJV/8+JSxHGxhT6iH7u3i3M0yJqQEN7CuxvHGtO3eaQQsAR5jjF1a6IGeNgM+NWHYeNIji5zRm1rxpBarsIu3Z+12FFzbec9XvltePoHj9BIvg8TgNVBWuk4eNoZ0s3Aysx05byo6qtvH3fUR0MV3aY88LtrBwXVjeLbsOVz2J/KKwXZ4YMrmTAo49K5mjdVkcVti/vTw/qzzO/m0GyRhJXfmDDsnEOZOORjk8uw6ndX0XwOsyh92UEuRgp2WmJYhy5uUVJZi+eoWTcT7YuwCVuacucBtxBcGOeLh2K39hdditpV9DauJAVgalsFnI69H9l6bqh2pn3dH+gHeeMJsgO0EJZ+7cnRUtouxh4kOf4OOZjepqY0j5mQev6SidrP07PERE9K+QcY0FrFFhUgbgy'
+
+# Finding API - https://www.x.com/developers/ebay/products/finding-api
+svcs.ebay.com:
+    appid: "PaulRead-replacme-PRD-1c2490906-7d7150ee"
+    version: 1.0.0
+
+# Shopping API - https://www.x.com/developers/ebay/products/shopping-api
+open.api.ebay.com:
+    appid: "PaulRead-replacme-PRD-1c2490906-7d7150ee'
+    version: 671
+
+# Shopping API - SANDBOX TESTING
+svcs.sandbox.ebay.com:
+    appid: 'PaulRead-replacme-SBX-482083935-2004a36b'
+    devid: 'e3b3d2c0-38f4-4997-b251-9fb8c5922fd3'
